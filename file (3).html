@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere 3 Sek-Jahre</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #fffef7;
+            color: #333;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: url('startbild.jpg') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(255,180,70,0.55),
+                rgba(0,200,255,0.45)
+            );
+        }
+
+        .hero h1 {
+            position: relative;
+            font-size: 3.6rem;
+            font-weight: 900;
+            color: white;
+            z-index: 2;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.45);
+        }
+
+        .scroll-down {
+            position: relative;
+            z-index: 2;
+            margin-top: 30px;
+            color: #fff;
+            font-size: 1.3rem;
+            animation: bounce 1.5s infinite;
+        }
+
+        @keyframes bounce {
+            0%,100% { transform: translateY(0);}
+            50% { transform: translateY(7px);}
+        }
+
+        /* Auswahl */
+        .section-select {
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #ffe7b3, #a8f7ff);
+            text-align: center;
+        }
+
+        .section-select h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .sek-buttons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .sek-btn {
+            padding: 18px 42px;
+            background: white;
+            border-radius: 20px;
+            font-size: 1.3rem;
+            border: 2px solid #ffcf91;
+            cursor: pointer;
+            color: #ff8a35;
+            font-weight: 700;
+            transition: .25s;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .sek-btn:hover {
+            transform: translateY(-6px);
+            background: #fff9f1;
+        }
+
+        /* Sektionen */
+        .sektion {
+            max-width: 1150px;
+            margin: auto;
+            padding: 70px 20px;
+        }
+
+        .sektion h3 {
+            font-size: 2.2rem;
+            color: #ff8a35;
+            margin-bottom: 35px;
+            font-weight: 800;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            transition: .25s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 25px rgba(255,150,60,0.3);
+        }
+
+        .media-wrapper {
+            height: 200px;
+            background: #ffe6c7;
+        }
+
+        .media-wrapper img,
+        .media-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .placeholder {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffaa63;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .card-text {
+            padding: 15px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: #777;
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Unsere 3 Sek-Jahre</h1>
+    <div class="scroll-down">▼ Scroll runter</div>
+</section>
+
+<!-- Auswahl -->
+<section class="section-select">
+    <h2>Wähle ein Jahr</h2>
+
+    <div class="sek-buttons">
+        <a href="#sek1" class="sek-btn">1. Sek</a>
+        <a href="#sek2" class="sek-btn">2. Sek</a>
+        <a href="#sek3" class="sek-btn">3. Sek</a>
+    </div>
+</section>
+
+<!-- SEK 1 -->
+<section class="sektion" id="sek1">
+    <h3>1. Sek – Der Anfang</h3>
+    <div class="grid">
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 1</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 2</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 3</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 4</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 5</div></div><div class="card-text">Text…</div></div>
+    </div>
+</section>
+
+<!-- SEK 2 -->
+<section class="sektion" id="sek2">
+    <h3>2. Sek – Mittendrin</h3>
+    <div class="grid">
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 1</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 2</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 3</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 4</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 5</div></div><div class="card-text">Text…</div></div>
+    </div>
+</section>
+
+<!-- SEK 3 -->
+<section class="sektion" id="sek3">
+    <h3>3. Sek – Finale</h3>
+    <div class="grid">
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 1</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 2</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 3</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 4</div></div><div class="card-text">Text…</div></div>
+        <div class="card"><div class="media-wrapper"><div class="placeholder">Bild 5</div></div><div class="card-text">Text…</div></div>
+    </div>
+</section>
+
+<footer>
+    © Sommerliche Erinnerungen – selbst erstellt
+</footer>
+
+</body>
+</html>
